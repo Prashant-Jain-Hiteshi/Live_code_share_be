@@ -5,6 +5,8 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
 import { SequelizeModule } from '@nestjs/sequelize';
 import { UsersModule } from './users/user.module';
 import { AuthModule } from './auth/auth.module';
+import { FilesModule } from './files/files.module';
+import { RoomsModule } from './rooms/rooms.module';
 
 @Module({
   imports: [
@@ -26,6 +28,8 @@ import { AuthModule } from './auth/auth.module';
     }),
     AuthModule,
     UsersModule,
+    FilesModule,
+    RoomsModule,
   ],
   controllers: [AppController],
   providers: [AppService],
