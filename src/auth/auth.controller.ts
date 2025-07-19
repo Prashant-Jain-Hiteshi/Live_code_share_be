@@ -19,7 +19,7 @@ export class AuthController {
     return await this.authService.verifyOtp(dto);
   }
   @Post('login')
-  @UseGuards(JwtAuthGuard)
+  // @UseGuards(JwtAuthGuard)
   async login(@Body() dto: LoginDto) {
     return await this.authService.login(dto);
   }
